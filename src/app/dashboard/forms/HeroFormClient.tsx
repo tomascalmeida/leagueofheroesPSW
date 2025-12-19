@@ -2,7 +2,7 @@
 
 import React, { useEffect, useState } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
-import { useHeroes } from "../../context/HeroesContext"; // ajusta o path
+import { useHeroes } from "../../context/HeroesContext";
 
 export default function HeroFormClient() {
   const { heroes, handleFormSubmit, canEdit } = useHeroes();
