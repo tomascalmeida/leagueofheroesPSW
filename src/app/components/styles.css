@@ -1,0 +1,458 @@
+/* ===== Layout global ===== */
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: radial-gradient(circle at top, #111827 0, #020617 45%, #000000 100%);
+  color: #f9fafb;
+}
+
+/* ===== Header ===== */
+.headerClass {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  padding: 20px 32px;
+  background: linear-gradient(135deg, #020617, #111827);
+  border-bottom: 1px solid rgba(148, 163, 184, 0.35);
+}
+
+.imageHeaderClass {
+  width: 15%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.imageHeaderClass img {
+  width: 80%;
+  height: auto;
+  display: block;
+}
+
+.textContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  color: #e5e7eb;
+}
+
+.textContainer h1 {
+  margin: 0;
+  font-size: 1.4rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.textContainer p {
+  margin: 4px 0 0;
+  font-size: 0.9rem;
+  color: #9ca3af;
+}
+
+/* nav diretamente dentro da textContainer */
+.textContainer nav {
+  margin-top: 12px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+/* botões de navegação */
+.textContainer nav a {
+  text-decoration: none;
+  color: #e5e7eb;
+  background: linear-gradient(135deg, #1d4ed8, #0f766e);
+  padding: 6px 16px;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 0.85rem;
+  border: 1px solid rgba(15, 23, 42, 0.8);
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.8);
+  transition: background 0.2s ease, transform 0.1s ease, box-shadow 0.2s ease;
+}
+
+.textContainer nav a:hover {
+  background: linear-gradient(135deg, #2563eb, #059669);
+  transform: translateY(-1px);
+  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.95);
+}
+
+/* ===== Footer ===== */
+.footerClass {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: radial-gradient(circle at top, #020617, #000000);
+  color: #94a3b8;
+  padding: 10px 20px;
+  text-align: center;
+  font-size: 0.8rem;
+  border-top: 1px solid rgba(148, 163, 184, 0.3);
+}
+
+/* ===== Hero section ===== */
+.fav-and-heroes {
+  position: relative;
+  margin: 40px auto 80px;
+  max-width: 1080px;
+  padding: 24px 24px 32px;
+  background: rgba(15, 23, 42, 0.88);
+  border-radius: 18px;
+  border: 1px solid rgba(148, 163, 184, 0.4);
+  box-shadow:
+    0 18px 45px rgba(0, 0, 0, 0.85),
+    0 0 0 1px rgba(15, 23, 42, 0.9);
+  backdrop-filter: blur(22px);
+}
+
+.fav-and-heroes select {
+  height: 34px;
+  max-width: 220px;
+  padding: 4px 10px;
+  border-radius: 8px;
+  border: 1px solid rgba(148, 163, 184, 0.45);
+  background: #0b1220;
+  color: #e5e7eb;
+  font-size: 0.9rem;
+  line-height: 1;
+}
+
+/* (Opcional) melhora a opção selecionada */
+.fav-and-heroes option {
+  background: #0b1220;
+  color: #e5e7eb;
+}
+
+
+/* botão de trocar favorito */
+.change-fav-btn {
+  margin-top: 8px;
+  padding: 8px 18px;
+  background: linear-gradient(135deg, #facc15, #f97316);
+  color: #111827;
+  border: none;
+  border-radius: 999px;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-size: 0.78rem;
+  box-shadow: 0 10px 25px rgba(248, 250, 252, 0.12);
+  transition: transform 0.1s ease, box-shadow 0.2s ease, filter 0.15s ease;
+}
+
+.change-fav-btn:hover {
+  transform: translateY(-1px) scale(1.03);
+  box-shadow: 0 14px 30px rgba(250, 250, 250, 0.18);
+  filter: brightness(1.05);
+}
+
+/* ===== Imagens / Heroes ===== */
+.imagensClass {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.heroBox {
+  width: 260px;
+  min-height: 260px;
+  border-radius: 18px;
+  border: 1px solid rgba(148, 163, 184, 0.4);
+  padding: 14px 16px 18px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background: radial-gradient(circle at top, #1f2937, #020617 55%, #000000 100%);
+  box-shadow: 0 14px 35px rgba(15, 23, 42, 0.95);
+  overflow: hidden;
+}
+
+.heroBox h3 {
+  margin: 10px 0 4px;
+  font-size: 1rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #e5e7eb;
+}
+
+.heroBox p {
+  margin: 0;
+  font-size: 0.86rem;
+  color: #9ca3af;
+}
+
+.heroImage {
+  width: 70%;
+  max-width: 180px;
+  height: auto;
+  display: block;
+  margin: 0 auto 6px;
+  border-radius: 12px;
+  border: 1px solid rgba(148, 163, 184, 0.5);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.9);
+  object-fit: cover;
+}
+
+/* ===== Loader overlay ===== */
+.loader-container {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.88);
+  z-index: 10;
+}
+
+.loader-container img {
+  width: 82px;
+  height: 82px;
+  object-fit: contain;
+}
+
+/* ===== Dashboard ===== */
+.dashboard {
+  max-width: 900px;
+  margin: 40px auto 80px;
+  padding: 24px 24px 32px;
+  background: rgba(15, 23, 42, 0.95);
+  border-radius: 18px;
+  border: 1px solid rgba(148, 163, 184, 0.45);
+  box-shadow:
+    0 18px 45px rgba(0, 0, 0, 0.9),
+    0 0 0 1px rgba(15, 23, 42, 0.9);
+  color: #e5e7eb;
+}
+
+.dashboard h1 {
+  margin: 0 0 16px;
+  font-size: 1.4rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.dashboard a {
+  display: inline-block;
+  margin-bottom: 20px;
+  padding: 8px 16px;
+  background: linear-gradient(135deg, #22c55e, #16a34a);
+  color: #020617;
+  text-decoration: none;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  border: none;
+  box-shadow: 0 10px 25px rgba(22, 163, 74, 0.45);
+  transition: transform 0.1s ease, box-shadow 0.2s ease, filter 0.15s ease;
+}
+
+.dashboard a:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 14px 32px rgba(22, 163, 74, 0.6);
+  filter: brightness(1.05);
+}
+
+.dashboard table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.86rem;
+}
+
+.dashboard th,
+.dashboard td {
+  padding: 8px 10px;
+  border-bottom: 1px solid rgba(55, 65, 81, 0.9);
+  text-align: left;
+}
+
+.dashboard th {
+  background: radial-gradient(circle at top, #1f2937, #020617);
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  color: #9ca3af;
+}
+
+.dashboard tr:hover {
+  background-color: rgba(31, 41, 55, 0.85);
+}
+
+.dashboard button {
+  margin-right: 6px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  border: 1px solid #22c55e;
+  background: linear-gradient(135deg, #22c55e, #16a34a);
+  color: #020617;
+  font-size: 0.75rem;
+  font-weight: 600;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  transition: transform 0.1s ease, box-shadow 0.2s ease, filter 0.15s ease;
+}
+
+.dashboard button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 24px rgba(22, 163, 74, 0.5);
+  filter: brightness(1.05);
+}
+
+/* ===== Favoritos (Dashboard) ===== */
+/* Usa estas classes no botão de favorito: className="fav-btn" e quando for favorito: "fav-btn is-fav" */
+.dashboard .fav-btn {
+  border: 1px solid rgba(250, 204, 21, 0.9);
+  background: linear-gradient(135deg, #facc15, #f97316);
+  color: #111827;
+}
+
+.dashboard .fav-btn:hover {
+  filter: brightness(1.06);
+  box-shadow: 0 12px 28px rgba(250, 204, 21, 0.25);
+}
+
+.dashboard .fav-btn.is-fav {
+  border: 1px solid rgba(244, 63, 94, 0.95);
+  background: linear-gradient(135deg, #f43f5e, #be123c);
+  color: #ffffff;
+}
+
+.dashboard .fav-btn.is-fav:hover {
+  filter: brightness(1.06);
+  box-shadow: 0 12px 30px rgba(244, 63, 94, 0.28);
+}
+
+/* ===== Form de heróis ===== */
+.hero-form {
+  max-width: 600px;
+  margin: 40px auto 90px;
+  padding: 24px 24px 28px;
+  background: rgba(15, 23, 42, 0.96);
+  border-radius: 18px;
+  border: 1px solid rgba(148, 163, 184, 0.45);
+  box-shadow:
+    0 18px 45px rgba(0, 0, 0, 0.9),
+    0 0 0 1px rgba(15, 23, 42, 0.9);
+  color: #e5e7eb;
+}
+
+.hero-form h2 {
+  margin: 0 0 18px;
+  font-size: 1.2rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.hero-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.hero-form label {
+  display: flex;
+  flex-direction: column;
+  font-weight: 600;
+  gap: 4px;
+  font-size: 0.9rem;
+}
+
+.hero-form input {
+  padding: 8px 10px;
+  border-radius: 10px;
+  border: 1px solid #4b5563;
+  font-size: 0.9rem;
+  background-color: #020617;
+  color: #e5e7eb;
+  outline: none;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease, background-color 0.15s ease;
+}
+
+.hero-form input:focus {
+  border-color: #22c55e;
+  box-shadow: 0 0 0 1px rgba(34, 197, 94, 0.7);
+  background-color: #020617;
+}
+
+.hero-form button[type="submit"] {
+  align-self: flex-start;
+  margin-top: 4px;
+  padding: 8px 18px;
+  border-radius: 999px;
+  border: none;
+  background: linear-gradient(135deg, #6366f1, #22c55e);
+  color: #020617;
+  font-weight: 700;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-size: 0.78rem;
+  box-shadow: 0 12px 28px rgba(99, 102, 241, 0.55);
+  transition: transform 0.1s ease, box-shadow 0.2s ease, filter 0.15s ease;
+}
+
+.hero-form button[type="submit"]:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 16px 36px rgba(99, 102, 241, 0.75);
+  filter: brightness(1.05);
+}
+
+/* ===== Responsivo ===== */
+@media (max-width: 768px) {
+  .headerClass {
+    flex-direction: row;
+    align-items: center;
+    padding: 16px 18px;
+  }
+
+  .textContainer h1 {
+    font-size: 1.1rem;
+  }
+
+  .fav-and-heroes,
+  .dashboard,
+  .hero-form {
+    margin: 24px 16px 80px;
+    padding: 18px 16px 24px;
+  }
+
+  .heroBox {
+    width: 100%;
+  }
+
+  .footerClass {
+    font-size: 0.75rem;
+    padding: 8px 10px;
+  }
+}
+
+.btn-back {
+  margin-left: 10px;
+  padding: 8px 18px;
+  border-radius: 999px;
+  border: 1px solid #4b5563;
+  background: linear-gradient(135deg, #0f172a, #020617);
+  color: #e5e7eb;
+  font-weight: 600;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  cursor: pointer;
+  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.7);
+  transition: transform 0.1s ease, box-shadow 0.2s ease, filter 0.15s ease;
+}
+
+.btn-back:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 14px 30px rgba(15, 23, 42, 0.9);
+  filter: brightness(1.05);
+}
